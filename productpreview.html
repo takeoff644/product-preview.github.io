@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --back:#f2ebe3;
+            --accent:#3c8068;
+            --font1:3em;
+            --font2:1.8em;
+            --pad:1em;
+    
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: var(--back);
+            display: grid;
+            align-items: center;
+
+        }
+        .container{
+            display: grid;
+            grid-auto-rows: none;
+            grid-template-columns: repeat(2,1fr);
+            position: absolute;
+            margin-left: 30%;
+            overflow: hidden;
+            
+            border-radius: 0.7em;
+            background-color: white;
+        }
+        img{
+            width: 250px;
+            height: 450px;
+            border-top-left-radius: 0.7em;
+            border-bottom-left-radius:0.7em ;
+            object-fit: cover;
+            margin-right: 0;
+            padding-right: 0;
+            
+        }
+        .head{
+            color:var(--accent);
+        }
+        p{
+            padding-left: var(--pad);
+        }
+        .font{
+            font-size: small;
+        }
+        button{
+            width: 15em;
+            height: 3em;
+            color: white;
+            background-color: var(--accent);
+            position: absolute;
+            margin-left: 1.4em;
+            border: transparent;
+            border-radius: 0.75em;
+            transition: 1s;
+        }
+        .green{
+            font-size: var(--font1);
+            color: var(--accent);
+        }
+        .small{
+            
+            padding-left: var(--pad);
+        }
+        link{
+            color: white;
+            background-color: white;
+            z-index: 2;
+        }
+        .black{
+            color: black;
+            font-size: var(--font2);
+            padding-top: 0;
+            margin-top: 0;
+        }
+        button:hover{
+            cursor: grab;
+            transform: scale(1.1);
+            background-color: #032b0d;
+        }
+        @media only screen and (max-width: 768px){
+            .container{
+                grid-template-columns: 1fr;
+                margin: var(--pad);
+                overflow: visible;
+                position: absolute;
+                padding: var(--pad);
+            }
+            img{
+                width: 100%;
+                height: 300px;
+                border-bottom-left-radius: 0;
+                border-top-left-radius:var(--pad) ;
+                border-top-right-radius: var(--pad);
+                padding-top: var(--pad)
+
+            }  
+            .font{
+                font-size: x-large;
+            }
+            p{
+                text-align: left;
+            }
+            .text{
+                height: 500px;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image" >
+            <picture>
+                <source media="(max-width:768px)" srcset="images/image-product-mobile.jpg" />
+                <img id="IMAGE" src="images\image-product-desktop.jpg" alt="product" loading="lazy" >
+            </picture>
+        </div>
+        <div class="text">
+            <p><span class="head">PERFUME</span></p>
+            <p><span class="black">Gabrielle</span> </p>
+            <p><span class="black">Essence Eau</span></p>
+            <p><span class="black">De Parfum</span></p>
+            <p><span class="font">A floral, solar and voluptuous</span></p>
+            <p><span class="font">interpretation composed by</span></p>
+            <p><span class="font">Olivier Polge, Perfumer-Creator</span></p> 
+            <p><span class="font">for the House of CHANEL.</span></p>
+            <p><span class="green">$149.99</span><span class="small"><sup><del>$169.99</del></sup></span></p>
+            <button type="button">
+                <link rel="stylesheet" href="images\favicon-32x32.png"><span class="font">Add to cart</span>
+            </button>
+        </div>
+ 
+
+</body>
+</html>
